@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="P1.css">
+<style>
+
+#level_list {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 20%;
+	left:-50%;
+	color:gold;
+    background-color: black;
+    border: 1px solid black;
+	    animation: fadeOut 0s forwards;
+
+}
+
+#level_list:target {
+    transform: translateX(150%);
+    animation: fadeIn 0.1s forwards;
+}
+
+#goback1:target #level_list {
+    animation: fadeOut 0s forwards;
+    transform: translateX(-150%);
+}
+
+#goback2:target #credit {
+    animation: fadeOut 0s forwards;
+    transform: translateX(-150%);
+}
+
+#credit:target {
+    transform: translateX(150%);
+    animation: fadeIn 0.1s forwards;
+}
+
+#credit {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+	left:-50%;
+    top: 20%;
+	color:gold;
+    background-color: black;
+    border: 1px solid black;
+		    animation: fadeOut 0s forwards;
+
+}
+
+button {
+	font-size
+    max-width: 100px;
+    max-height: 50px;
+    border: none;
+    opacity: 0.85;
+}
+
+</style>
+</head>
+<body>
+    <img src="Canyon.png" style="width:100%; height:100%; position: absolute; z-index: -1; min-width:1300px;">
+    <div style="position: fixed; width: 50%; height: 50%; text-align: center; justify-content: center; align-items: center; top: 20%; left: 25%; display: flex; flex-direction: column;">
+        <img src="Title.png" style="width: 50%;">
+        <button onclick="location.href='#'" style="font-size: 14px;">Start Game</button>
+        <button onclick="location.href='#credit'" style="font-size: 14px;">Credit</button>
+        <button onclick="location.href='#level_list'" style="font-size: 14px;">Pick Level</button>
+    </div>
+    <div id="credit">
+        <button onclick="location.href='#goback1'" style="font-size: 10px;">Back</button><br>
+		<center>Project name: Legend's tale</center>
+        <center>Kaleb Evory---Leader</center>
+        <center>Sidratul Chowdhury---Coder/Programmer</center>
+        <center>Yikai---Designer</center><br>
+		<center>Description:This is a story of how a hero travel thought the most Danger forest in this land</center>
+     </div>
+    <div id="level_list">
+        <button onclick="location.href='#goback2'" style="font-size: 10px;">Back</button>
+        <center><a href="level1">level 1</a></center><br>
+        <center><a href="level2">level 2</a></center><br>
+        <center><a href="./P-Dragon.html">level 3</a></center><br>
+    </div>
+</body>
+</html>
